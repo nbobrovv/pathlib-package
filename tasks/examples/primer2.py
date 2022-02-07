@@ -3,6 +3,7 @@
 
 import pathlib
 
+
 def tree(directory):
     print(f'+ {directory}')
     for path in sorted(directory.rglob('*')):

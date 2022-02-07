@@ -4,4 +4,6 @@
 import pathlib
 import collections
 
-print(collections.Counter(p.suffix for p in pathlib.Path.cwd().iterdir()))
+
+if __name__ == "__main__":
+    print(collections.Counter(p.suffix for p in pathlib.Path.cwd().iterdir()))

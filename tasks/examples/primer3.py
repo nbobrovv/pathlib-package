@@ -11,5 +11,7 @@ def unique_path(directory, name_pattern):
         if not path.exists():
             return path
 
-path = unique_path(pathlib.Path.cwd(), 'test{:03d}.txt')
-print(path)
+
+if __name__ == "__main__":
+    path = unique_path(pathlib.Path.cwd(), 'test{:03d}.txt')
+    print(path)
