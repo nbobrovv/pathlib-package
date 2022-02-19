@@ -106,7 +106,8 @@ def save_students(file_name, students):
     """
     with open(file_name, "w", encoding="utf-8") as fout:
         json.dump(students, fout, ensure_ascii=False, indent=4)
-
+    directory = pathlib.Path.cwd().joinpath(file_name)
+    directory.replace(pathlib.Path.home().joinpath(file_name))
 
 def load_students(file_name):
     """
