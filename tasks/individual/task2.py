@@ -76,19 +76,19 @@ def main(command_line=None):
     )
     args = parser.parse_args(command_line)
     if args.command == 'mkdir':
-        directory_path = pathlib.Path.cwd() / args.filename
+        directory_path = current / args.filename
         directory_path.mkdir()
         tree(current)
     elif args.command == "rmdir":
-        directory_path = pathlib.Path.cwd() / args.filename
+        directory_path = current / args.filename
         directory_path.rmdir()
         tree(current)
     elif args.command == "touch":
-        directory_path = pathlib.Path.cwd() / args.filename
+        directory_path = current / args.filename
         directory_path.touch()
         tree(current)
     elif args.command == "rm":
-        directory_path = pathlib.Path.cwd() / args.filename
+        directory_path = current / args.filename
         directory_path.unlink()
         tree(current)
     else:
